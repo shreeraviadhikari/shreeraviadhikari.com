@@ -1,6 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const navs = [
+  {
+    href: "/about",
+    display: "About",
+  },
+  {
+    href: "/projects",
+    display: "Projects",
+  },
+  {
+    href: "/contact",
+    display: "Contact",
+  },
+];
+
 export default function Navbar() {
   return (
     <nav className=" p-2 ">
@@ -9,24 +24,15 @@ export default function Navbar() {
           <Image src="/logo-black.png" alt="logo" height={200} width={200} />
         </Link>
         <div className="space-x-8">
-          <Link
-            href="/about"
-            className="text-xl text-gray-500 hover:text-black"
-          >
-            About
-          </Link>
-          <Link
-            href="/projects"
-            className="text-xl text-gray-500 hover:text-black"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/contact"
-            className="text-xl text-gray-500 hover:text-black"
-          >
-            Contact
-          </Link>
+          {navs.map((nav) => (
+            <Link
+              key={nav.display}
+              href={nav.href}
+              className="text-xl mb-2 px-2 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {nav.display}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>

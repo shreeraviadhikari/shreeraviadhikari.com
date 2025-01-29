@@ -3,19 +3,28 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-600 ">
+    <nav className=" p-2 ">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-white text-2xl font-bold">
-          <Image src="/logo-white.png" alt="logo" height={200} width={200} />
+        <Link href="/" className="">
+          <Image src="/logo-black.png" alt="logo" height={200} width={200} />
         </Link>
-        <div className="space-x-4">
-          <Link href="/about" className="text-white hover:text-gray-200">
+        <div className="space-x-8">
+          <Link
+            href="/about"
+            className="text-xl text-gray-500 hover:text-black"
+          >
             About
           </Link>
-          <Link href="/projects" className="text-white hover:text-gray-200">
+          <Link
+            href="/projects"
+            className="text-xl text-gray-500 hover:text-black"
+          >
             Projects
           </Link>
-          <Link href="/contact" className="text-white hover:text-gray-200">
+          <Link
+            href="/contact"
+            className="text-xl text-gray-500 hover:text-black"
+          >
             Contact
           </Link>
         </div>

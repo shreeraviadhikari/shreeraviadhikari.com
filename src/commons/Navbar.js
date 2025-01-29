@@ -10,10 +10,6 @@ const navs = [
     href: "/projects",
     display: "Projects",
   },
-  {
-    href: "/contact",
-    display: "Contact",
-  },
 ];
 
 export default function Navbar() {

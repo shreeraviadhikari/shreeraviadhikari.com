@@ -3,7 +3,7 @@ const nextConfig = {
   output: "export",
   images: {
     loader: "custom",
-    loaderFile: "./my-loader.js",
+    loaderFile: "./image-loader.js",
   },
 };
 

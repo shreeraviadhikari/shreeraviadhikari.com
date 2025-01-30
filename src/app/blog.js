@@ -42,7 +42,7 @@ const blogPosts = [
 const BlogPage = () => {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">New Wordspills</h1>
+      <h1 className="text-3xl font-bold mb-6">Latest Articles</h1>
       <div className="grid md:grid-cols-2 gap-6">
         {blogPosts.map((post) => (
           <div
@@ -57,7 +57,9 @@ const BlogPage = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
+              <h2 className="text-xl text-black font-semibold mb-2">
+                {post.title}
+              </h2>
               <p className="text-gray-600 text-sm mb-4">
                 {post.excerpt.substring(0, 80) + `...`}
               </p>

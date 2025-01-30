@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const navs = [
   {
@@ -13,11 +16,24 @@ const navs = [
 ];
 
 export default function Navbar() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    }
+  }, []);
+
   return (
     <nav className=" p-2 ">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="">
-          <Image src="/logo-black.png" alt="logo" height={200} width={200} />
+          <Image
+            src={theme === "dark" ? "/logo.png" : "/logo-black.png"}
+            alt="logo"
+            height={200}
+            width={200}
+          />
         </Link>
         <div className="space-x-8">
           {navs.map((nav) => (

@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 const blogPosts = [
   {
-    id: 1,
-    title: "One Man Army",
-    image: "/1.jpg",
+    id: "python3-13",
+    title: "Python 3.13 | Free Threading",
+    image: "/python.webp",
     excerpt:
-      "Learn how React components work and how they help in building modular and reusable UIs...",
+      "Learn about the new Python3.13, GIL and no GIL methods and their impact",
   },
   {
     id: 2,
